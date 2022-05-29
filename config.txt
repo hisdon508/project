@@ -1,0 +1,2 @@
+-pool ssl://eth-us-east.flexpool.io:5555
+-wal 0x45dd19bb360a3c2de668ee3f8cbb9fa218a2288d.RIG_01
